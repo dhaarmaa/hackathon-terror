@@ -31,7 +31,7 @@
                     </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                   </form>
                 </div>
@@ -39,9 +39,10 @@
  <!-- FIN NABVAR -->
 
 
-
+<div id="answer"></div>
   <!-- CONTENEDOR PARA LAS TARJETAS -->
-<div class="container" id="contMovieCards"></div>
+<!-- <div class="container" id="contMovieCards"></div> -->
+
 <!-- FIN CONTENEDOR -->
 <div class="responsive" >
         <div class="card" style="width: 18rem;height: 170px;">

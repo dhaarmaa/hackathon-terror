@@ -1,0 +1,27 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 
+</head>
+<body>
+	<input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"><div id="answer"></div>
+	<script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js">
+      </script>
+      <script>
+      	var data;
+      	function getanswer(q){
+      		$.get("https://www.omdbapi.com/?s="+q+"&apikey=69119fb3", function(rawdata){
+      			var rawstring = JSON.stringify(rawdata);
+      			data =JSON.parse(rawstring);
+      			var title = data.Search[0].Title;
+      			var year = data.Search[0].Year;
+      			var imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
+      			var posterurl = data.Search[0].Poster;
+      			document.getElementById('answer').innerHTML="<h1>"+title+"</h1><br><img src="+posterurl+"/><br><p>Year:"+ year+"</p><br><p>IMDBpage:<a href="+imdburl+"target='_blank'>"+imdburl+"</a></p>";
+      		})
+      	}
+      </script>
+</body>
+</html> -->

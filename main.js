@@ -18,7 +18,21 @@
  // }).then(function(myJson) {
  //     console.log(myJson);
  // });
-
+var data;
+      	function getanswer(q){
+      		fetch("https://www.omdbapi.com/?s="+q+"&apikey=69119fb3").then((response)=>{
+      			return response.json();
+      		}).then((myJson)=>{
+      			var rawstring = JSON.stringify(myJson);
+      			data =JSON.parse(rawstring);
+      			console.log(data);
+      			var title = data.Search[0].Title;
+      			var year = data.Search[0].Year;
+      			var imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
+      			var posterurl = data.Search[0].Poster;
+      			document.getElementById('answer').innerHTML=`<h1>${title}</h1><br><img src="${posterurl}"/><br><p>Year:${year}</p><br><p>IMDBpage:<a href="${imdburl}" target="_blank">${imdburl}</a></p>`;
+      		})
+      	}
 document.getElementById('vampires').addEventListener('click', ()=>{
 	card = '';
  	hasAnyMovie(arrVampires);
