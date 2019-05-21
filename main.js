@@ -8,6 +8,8 @@
  const arrClassicHorrorMovie = ['tt0055830','tt0074486','tt0057129','tt0084924','tt0075005','tt0010323','tt0013442','tt0021814','tt0021884','tt0034398','tt0046911','tt0077745','tt0054215','tt0055018','tt0053459','tt0063522','tt0063350','tt0069995','tt0070047','tt0071222','tt0072271','tt0074285','tt0076786','tt0076162','tt0077651','tt0078748'];
  const arrLove = ['tt0089885','tt0091083','tt0264508','tt0081318','tt0099180','tt0082966','tt0448190','tt0478988','tt0112643','tt0057128','tt0107664','tt0065327','tt0065669','tt0105242','tt1498878','tt0059465','tt0119279','tt0092809','tt0096344','tt0478126','tt0062833','tt7560964','tt0062266'];
  const arrGhost = ['tt0103919','tt0256009','tt0298130','tt2023587','tt0230600','tt0116365','tt0087332','tt0094721','tt0055018','tt0078767','tt1457767','tt0057129','tt0167404','tt0081505','tt0084516'];
+ const arrWerewolf = ['tt0082010','tt0034398','tt0210070','tt0280609','tt0862856','tt0054777','tt0087075','tt0082533','tt0035899','tt0202114','tt0027194','tt0090021','tt0083336','tt0111742','tt0090142','tt2420756','tt2229511','tt0780653','tt0115610','tt2818178','tt0071200','tt2781516','tt0050530','tt0067972','tt0118137'];
+ const arrShelley = ['tt3906082','tt1795369','tt0072431','tt0026138','tt0021884','tt0165050','tt0040068','tt0165798','tt0070074','tt0050280','tt0031951','tt5821856','tt6229862','tt0368730','tt0065738','tt0298028','tt0001223','tt0109836','tt0071519','tt0270954',];
  let card = '';
  let imgHorror = '';
  window.load;
@@ -44,6 +46,14 @@ document.getElementById('love').addEventListener('click', ()=>{
 document.getElementById('ghost').addEventListener('click', ()=>{
 	card = '';
 	hasAnyMovie(arrGhost);
+})
+document.getElementById('wer').addEventListener('click', ()=>{
+	card = '';
+	hasAnyMovie(arrWerewolf);
+})
+document.getElementById('shell').addEventListener('click', ()=>{
+	card = '';
+	hasAnyMovie(arrShelley);
 })
 const hasAnyMovie = (arr) =>{
 	arr.forEach((element)=>{
