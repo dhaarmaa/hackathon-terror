@@ -32,7 +32,6 @@
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
                     <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                   </form>
                 </div>
               </nav>
@@ -45,39 +44,43 @@
 
 <!-- FIN CONTENEDOR -->
 <div class="responsive" >
+        
+          <div class="card" style="width: 18rem;height: 170px;">
+            <a id="classic" href="#">
+              <img src="img/classic.jpeg" class="card-img-top" alt="vampire">
+              <div class="overlay"><p>Classic horror movie</p></div>
+            </a>
+          </div>
+       
         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="classic" href="#"><img src="img/classic.jpeg" class="card-img-top" alt="vampire"></a>
+          <a id="vampires" href="#"><img src="img/vamp.jpg" class="card-img-top" alt="vampire"><div class="overlay"><p>Vampire movie</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="zombie" href="#"><img src="img/zombie.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>Zombie movie</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="king" href="#"><img src="img/king.jpeg" class="card-img-top" alt="vampire"><div class="overlay"> <p>Movies based on books by Stephen King</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="love" href="#"><img src="img/love.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>World of Howard Lovecraft</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="poe" href="#"><img src="img/poe.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>Inspired by Edgar Allan Poe</p></div></a>
         </div>
         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="vampires" href="#"><img src="img/vamp.jpg" class="card-img-top" alt="vampire"></a>
+          <a id="ghost" href="#"><img src="img/fantasmas.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>Ghost Movie</p></div></a>
         </div>
          <div class="card" style="width: 18rem;height: 170px;">
-          <a id="zombie" href="#"><img src="img/zombie.jpeg" class="card-img-top" alt="vampire"></a>
+          <a id="wer" href="#"><img src="img/lican.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>Werewolf movie</p></div></a>
         </div>
-         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="king" href="#"><img src="img/king.jpeg" class="card-img-top" alt="vampire"></a>
-        </div>
-         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="love" href="#"><img src="img/love.jpeg" class="card-img-top" alt="vampire"></a>
-        </div>
-         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="poe" href="#"><img src="img/poe.jpeg" class="card-img-top" alt="vampire"></a>
-        </div>
-        <div class="card" style="width: 18rem;height: 170px;">
-          <a id="ghost" href="#"><img src="img/fantasmas.jpeg" class="card-img-top" alt="vampire"></a>
-        </div>
-         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="wer" href="#"><img src="img/lican.jpeg" class="card-img-top" alt="vampire"></a>
-        </div>
-
- <div class="card" style="width: 18rem;height: 170px;">
-          <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"></a>
-        </div>        
-       </div>
+       <div class="card" style="width: 18rem;height: 170px;">
+          <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>Mary Shelley and her doctor Frankenstein</p></div></a>
+       </div>        
+</div>
       
        
         
-        <div class="row" id="printInfo"></div>
+        <div class="container"><div class="row" id="printInfo"></div></div>
 
 <!-- CARRUSEL MEJOR EVALUADAS -->
 <div class="container" id="contCarousel" ></div>

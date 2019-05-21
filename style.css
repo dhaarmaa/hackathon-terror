@@ -1,3 +1,44 @@
 /*body{
 	background-color: black;
 }*/
+/*slick slider*/
+.overlay {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    position: absolute;
+    height: 170px;
+    background-color: rgba(149, 24, 24, .5);
+    opacity: 0;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: .2s;
+}
+.overlay:hover {
+    opacity: 1;
+    transition: .4s;
+}
+.overlay p{
+	margin-top: 60px;
+}
+/*movie cards*/
+#printInfo .card{
+	margin: 10px;
+}
+#printInfo .card:hover{
+	cursor: pointer;
+}
+.card-body button{
+	padding: 7px 15px;
+	border-radius: 15px;
+	border: none;
+	background-color: rgba(0, 0, 0, .5);;
+	color: white;
+}
+.card-body button:hover{
+	background-color: rgba(149, 24, 24, .5);
+	opacity: 1;
+    transition: .4s;
+}

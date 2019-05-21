@@ -94,7 +94,7 @@ const hasAnyMovie = (arr) =>{
 						        <h5 class="card-title">${myJson.Title}</h5>
 						        <p class="card-text">${myJson.Plot}</p>
 						        <p>${myJson.imdbID}</p>
-						        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						        <button>more info</button>
 						      </div>
 						    </div>
 						  </div>
