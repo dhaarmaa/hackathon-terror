@@ -87,7 +87,7 @@ const getAnyMovie = (arr) =>{
 		fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
 		     return response.json();
 		 }).then((myJson)=>{
-		   
+		   console.log(myJson);
 		     card += `<a data-target="#modal${myJson.imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
 						      <img src="${myJson.Poster}" class="card-img" alt="${myJson.Title}"><div class="overlay"><h1>${myJson.Title}</h1></div>
 						    </div></a>
@@ -96,11 +96,32 @@ const getAnyMovie = (arr) =>{
 			modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${myJson.imdbID}" role="dialog" tabindex="-1">
                      <div class="modal-dialog modal-dialog-centered" role="document">
                          <div class="modal-content">
-                             
+                             <div class="modal-header">
+                                 <h4 class="modal-title" id="exampleModalLongTitle">
+                                 ${myJson.Title} ${myJson.Year}
+                                 </h4>
+                               <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                     <span aria-hidden="true">
+                                         ×
+                                     </span>
+                                 </button>
+                          	 </div>
                              <div class="modal-body">
-                                 <div class="grid">
+                                 <div class="row">
+                                 <div class="col-md-8">
                                     <img src ="${myJson.Poster}">
+                                    </div>
+                                    <div class="col-md-4">
+                                    <p>Director:${myJson.Director}</p>
+           							<p>Genre:${myJson.Genre}</p>
+                                    <p>Released:${myJson.Released}</p>
+                                    <p>Actors:${myJson.Actors}</p>
+                                    <p>Runtime:${myJson.Runtime}</p>
+                                    <p>IMBD:</p>
+                                    <a href="https://www.imdb.com/title/${myJson.imdbID}/" target="_blank">https://www.imdb.com/title/${myJson.imdbID}/</a>
+                                    </div>
                                  </div>
+                                 <p>${myJson.Plot}</p>
                              </div>
                          </div>
                      </div>
