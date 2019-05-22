@@ -33,6 +33,12 @@ Yo como usuario de esta plataforma quiero poder filtrar mi bússqueda según el 
 Yo como usuario de esta plataforma quiero poder buscar mi película por título para agilizar el encuentro de la información que necesito
 
 ### ** Diseño de la Interfaz de Usuario**
+[Encuesta 1](https://docs.google.com/forms/d/10sqFpVlnRlGSJa2n-T9CYk9npum18cjzjLH7gSrMMZY/edit#responses)
+
+CONCLUSIONES: los usuarios utilizan más habitualmente plataformas en internet, seguido por netflix; prefieren esto porque la estructura de estas páginas les resulta legible, y fácil de utilizar, lo que las hace requerir  análisis de parte nuestra para rescatar la escencia de ellas y poder re interpretarlas en nuestro nuevo modelo. El género favorito de nuestros entrevistados, resultó ser el de terror. Y el director es relevante* podría ser usado como un filtro.
+ se necesita nueva entrevista para definir más tamices de nuestro proyecto, orientarlo hacia el genero favorito de la muestra de entrevistados.
+[Encuesta 2](https://docs.google.com/forms/d/e/1FAIpQLSfBHAcRBepN2q2YawvlKxYE2PRYuYsBwhV6WoZLjK7Q4-bkvA/viewform?usp=sf_link)
+
 
 #### Prototipo de baja fidelidad
 
