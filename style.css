@@ -2,7 +2,6 @@ body{
 	background-color: black;
 }
 
-/*slick slider*/
 .overlay {
     font-size: 1.5rem;
     text-align: center;
@@ -51,3 +50,36 @@ body{
     background-color: rgba(0, 0, 0, 0.65);
     z-index: 100;
 }
+.page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+  
+.nav-link{
+    margin-right:150px;
+}
+nav.navbar {
+    background-color:black;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color:red;
+    }
+ .btn{
+    background: #2b303b;
+    
+ }   
+ .form-inline{
+color: #2b303b;
+ }
+ .nav-link{
+     color:red;
+ }
+
+  
