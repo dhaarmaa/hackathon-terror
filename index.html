@@ -16,6 +16,7 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body> 
+
     <div class="container">
         <div class="text-center">
           <div class="row">
@@ -25,10 +26,9 @@
         </div>
       </div>
     </div>
-
-     <!-- NAVBAR  -->       
-     <nav class="navbar navbar-expand-lg  git style="background-color:black;">
-                <!--<a class="navbar-brand" href="#"><img style="width: 40%" class="img-fluid" src="logoo.png" alt="header"></a>/-->
+    
+            <!-- NAVBAR  -->       
+            <nav class="navbar navbar-expand-lg style:"background-color:black;>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -36,19 +36,28 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="https://www.imdb.com/">IAMDb <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#"></a>
+                      <a class="nav-link" href="#">About</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Asian Terror</a>
+                    </li>
+                    
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="search film by tittle" aria-label="Search">
+                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0"  type="search">Search</button>
                   </form>
                 </div>
               </nav>
-              
- <!-- FIN NABVAR -->
+              <!-- FIN NABVAR -->
+                    
+
 
 
 <div id="answer"></div>
@@ -61,6 +70,7 @@
           <div class="card" style="width: 18rem;height: 170px;">
             <a id="classic" href="#">
               <img src="img/classic.jpeg" class="card-img-top" alt="vampire">
+
               <div class="overlay"><p>CLASSIC HORROR </p></div>
             </a>
           </div>
@@ -90,7 +100,7 @@
           <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p> MARY SHELLEY AND HER DOCTOR FRANKENSTEIN</p></div></a>
        </div>        
 </div>
-      
+
        
         
         <div class="row" id="printInfo"></div>
@@ -111,7 +121,15 @@
         <script src="main.js">
         </script>
 
-    
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright © All rights reserved.
+  </div>
+  
+
+</footer>
+<!-- Footer -->
 </body>
 
 </html>
