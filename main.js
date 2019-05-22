@@ -26,13 +26,14 @@ let data;
       		fetch("https://www.omdbapi.com/?s="+q+"&apikey=69119fb3").then((response)=>{
       			return response.json();
       		}).then((myJson)=>{
-      			let rawstring = JSON.stringify(myJson);
-      			data =JSON.parse(rawstring);
-      			let title = data.Search[0].Title;
+      			let string = JSON.stringify(myJson);
+      			data =JSON.parse(string);
+				  let title = data.Search[0].Title;
+				  
       			let year = data.Search[0].Year;
       			let imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
       			let posterurl = data.Search[0].Poster;
-      			printInfo.innerHTML=`<h1>${title}</h1><br><img src="${posterurl}"/><br><p>Year:${year}</p><br><p>IMDBpage:<a href="${imdburl}" target="_blank">${imdburl}</a></p>`;
+      			printInfo.innerHTML=`<h1>${title}</h1><br> <img src="${posterurl}"/><br><p>Year:${year}</p><br><p>IMDBpage:<a href="${imdburl}" target="_blank">${imdburl}</a></p>`;
       		})
       	}
 document.getElementById('vampires').addEventListener('click', (e)=>{

@@ -14,29 +14,6 @@
 </head>
 <body> 
 
-     <!-- NAVBAR  -->       
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img style="width: 20%" class="img-fluid" src="img/header.png" alt="header"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  </form>
-                </div>
-              </nav>
- <!-- FIN NABVAR -->
-
 
 <div id="answer"></div>
   <!-- CONTENEDOR PARA LAS TARJETAS -->
@@ -77,6 +54,36 @@
           <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>Mary Shelley and her doctor Frankenstein</p></div></a>
        </div>        
 </div>
+
+ <!-- NAVBAR  -->       
+ <nav class="navbar navbar-expand-lg style:"background-color:black;>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Noticias</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Terror asiatico</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0"  type="search">Search</button>
+    </form>
+  </div>
+</nav>
+<!-- FIN NABVAR -->
       
        
         
@@ -123,7 +130,15 @@
         <script src="main.js">
         </script>
 
-    
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright © All rights reserved.
+  </div>
+  
+
+</footer>
+<!-- Footer -->
 </body>
 
 </html>
