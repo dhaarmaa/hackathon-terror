@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel= "shortcut icon" href ="https://files.slack.com/files-pri/T0NNB6T0R-FJWG2DLAG/rottenfilmslogo.png"/>
+    <link rel= "shortcut icon" href ="https://files.slack.com/files-pri/T0NNB6T0R-FJWFBC2LC/rottenfilmslogo.png"/>
 
     <title>ROTTEN FILMS</title>
     <!-- css de bootstrap -->
@@ -16,7 +16,6 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body> 
-
     <div class="container">
         <div class="text-center">
           <div class="row">
@@ -26,9 +25,10 @@
         </div>
       </div>
     </div>
-    
-            <!-- NAVBAR  -->       
-            <nav class=" navbar navbar-expand-lg  style:"background-color:black;>
+
+     <!-- NAVBAR  -->       
+     <nav class="navbar navbar-expand-lg sticky style="background-color:black;>
+                <a class="navbar-brand" href="index.html"><img style="width: 20%" class="img-fluid" src="https://files.slack.com/files-pri/T0NNB6T0R-FJWG2DLAG/rottenfilmslogo.png" alt="header"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -36,28 +36,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Asian Terror</a>
-                    </li>
-                    
+                      <a class="nav-link" href="https://www.imdb.com/">IAMDb <span class="sr-only"></span></a>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0"  type="search">Search</button>
+                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="search film by tittle" aria-label="Search">
                   </form>
                 </div>
               </nav>
-              <!-- FIN NABVAR -->
-                    
-
+              
+ <!-- FIN NABVAR -->
 
 
 <div id="answer"></div>
@@ -70,8 +57,7 @@
           <div class="card" style="width: 18rem;height: 170px;">
             <a id="classic" href="#">
               <img src="img/classic.jpeg" class="card-img-top" alt="vampire">
-
-              <div class="overlay"><p>CLASSIC HORROR </p></div>
+              <div class="overlay"><p>CLASSIC</p></div>
             </a>
           </div>
        
@@ -88,7 +74,7 @@
           <a id="love" href="#"><img src="img/love.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>WORLD OF HOWARD LOVECRAFT</p></div></a>
         </div>
          <div class="card" style="width: 18rem;height: 170px;">
-          <a id="poe" href="#"><img src="img/poe.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>INPIRED BY EDGAR ALLAN POE</p></div></a>
+          <a id="poe" href="#"><img src="img/poe.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>INSPIRED BY EDGAR ALLAN POE</p></div></a>
         </div>
         <div class="card" style="width: 18rem;height: 170px;">
           <a id="ghost" href="#"><img src="img/fantasmas.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>GHOST</p></div></a>
@@ -97,10 +83,10 @@
           <a id="wer" href="#"><img src="img/lican.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>WEREWOLF</p></div></a>
         </div>
        <div class="card" style="width: 18rem;height: 170px;">
-          <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p> MARY SHELLEY AND HER DOCTOR FRANKENSTEIN</p></div></a>
+          <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>MARY SHELLEY AND HER DOCTOR FRANKENSTEIN</p></div></a>
        </div>        
 </div>
-
+      
        
         
         <div class="row" id="printInfo"></div>
@@ -121,15 +107,7 @@
         <script src="main.js">
         </script>
 
-<footer class="page-footer font-small blue">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">Copyright © All rights reserved.
-  </div>
-  
-
-</footer>
-<!-- Footer -->
+    
 </body>
 
 </html>
