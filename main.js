@@ -28,6 +28,7 @@ let data;
       		}).then((myJson)=>{
       			let rawstring = JSON.stringify(myJson);
       			data =JSON.parse(rawstring);
+      			console.log(data);
       			let title = data.Search[0].Title;
       			let year = data.Search[0].Year;
       			let imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
@@ -35,13 +36,15 @@ let data;
       			printInfo.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
 						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h1>${title}</h1></div>
 						    </div></a>`;
-
-				showModal.innerHTML = `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${data.Search[0].imdbID}" role="dialog" tabindex="-1">
+				fetch(`https://www.omdbapi.com/?i=${data.Search[0].imdbID}&apikey=${keyOMBD}`).then((response)=>{
+					return response.json();
+				}).then((myJson)=>{    
+				showModal.innerHTML = `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${myJson.imdbID}" role="dialog" tabindex="-1">
                      <div class="modal-dialog modal-dialog-centered" role="document">
                          <div class="modal-content">
                              <div class="modal-header">
                                  <h4 class="modal-title" id="exampleModalLongTitle">
-                                 ${title} ${year}
+                                 ${myJson.Title} ${myJson.Year}
                                  </h4>
                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                                      <span aria-hidden="true">
@@ -52,23 +55,23 @@ let data;
                              <div class="modal-body">
                                  <div class="row">
                                  <div class="col-md-8">
-                                    <img src ="${posterurl}">
+                                    <img src ="${myJson.Poster}">
                                     </div>
                                     <div class="col-md-4">
-                                    <p>Director:${data.Search[0].Director}</p>
-           							<p>Genre:${data.Search[0].Genre}</p>
-                                    <p>Released:${data.Search[0].Released}</p>
-                                    <p>Actors:${data.Search[0].Actors}</p>
-                                    <p>Runtime:${data.Search[0].Runtime}</p>
+                                    <p>Director:${myJson.Director}</p>
+           							<p>Genre:${myJson.Genre}</p>
+                                    <p>Released:${myJson.Released}</p>
+                                    <p>Actors:${myJson.Actors}</p>
+                                    <p>Runtime:${myJson.Runtime}</p>
                                     <p>IMBD:</p>
-                                    <a href="https://www.imdb.com/title/${data.Search[0].imdbID}/" target="_blank">https://www.imdb.com/title/${data.Search[0].imdbID}/</a>
+                                    <a href="https://www.imdb.com/title/${myJson.imdbID}/" target="_blank">https://www.imdb.com/title/${data.Search[0].imdbID}/</a>
                                     </div>
                                  </div>
-                                 <p>${data.Search[0].Plot}</p>
+                                 <p>${myJson.Plot}</p>
                              </div>
                          </div>
                      </div>
-                 </div>`;
+                 </div>`;})
            
 						   })
       	}
