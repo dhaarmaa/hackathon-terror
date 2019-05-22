@@ -11,7 +11,9 @@
  const arrWerewolf = ['tt0082010','tt0034398','tt0210070','tt0280609','tt0862856','tt0054777','tt0087075','tt0082533','tt0035899','tt0202114','tt0027194','tt0090021','tt0083336','tt0111742','tt0090142','tt2420756','tt2229511','tt0780653','tt0115610','tt2818178','tt0071200','tt2781516','tt0050530','tt0067972','tt0118137'];
  const arrShelley = ['tt3906082','tt1795369','tt0072431','tt0026138','tt0021884','tt0165050','tt0040068','tt0165798','tt0070074','tt0050280','tt0031951','tt5821856','tt6229862','tt0368730','tt0065738','tt0298028','tt0001223','tt0109836','tt0071519','tt0270954',];
  const printInfo = document.getElementById('printInfo');
+ const showModal = document.getElementById('modal');
  let card = '';
+ let modal ='';
  let imgHorror = '';
  window.load;
  // fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${keyTMD}&include_adult=true&include_video=false&page=1000&with_genres=27`).then(function(response) {
@@ -36,37 +38,39 @@ let data;
 document.getElementById('vampires').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
- 	hasAnyMovie(arrVampires);
+ 	getAnyMovie(arrVampires);
+
+ 	
 })
 document.getElementById('classic').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
-	hasAnyMovie(arrClassicHorrorMovie);
+	getAnyMovie(arrClassicHorrorMovie);
 })
 document.getElementById('zombie').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
-	hasAnyMovie(arrZombies);
+	getAnyMovie(arrZombies);
 })
 document.getElementById('king').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
-	hasAnyMovie(arrKing);
+	getAnyMovie(arrKing);
 })
 document.getElementById('poe').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
-	hasAnyMovie(arrPoe);
+	getAnyMovie(arrPoe);
 })
 document.getElementById('love').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
-	hasAnyMovie(arrLove);
+	getAnyMovie(arrLove);
 })
 document.getElementById('ghost').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
-	hasAnyMovie(arrGhost);
+	getAnyMovie(arrGhost);
 })
 document.getElementById('wer').addEventListener('click', (e)=>{
 	e.preventDefault();
@@ -76,19 +80,32 @@ document.getElementById('wer').addEventListener('click', (e)=>{
 document.getElementById('shell').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
-	hasAnyMovie(arrShelley);
+	getAnyMovie(arrShelley);
 })
-const hasAnyMovie = (arr) =>{
+const getAnyMovie = (arr) =>{
 	arr.forEach((element)=>{
 		fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
 		     return response.json();
 		 }).then((myJson)=>{
-		   console.log(myJson);
-		     card += `<div class="card" style="width: 18rem">
-						      <img src="${myJson.Poster}" class="card-img" alt=""><div class="overlay"><h1>${myJson.Title}</h1></div>
-						    </div>
+		   
+		     card += `<a data-target="#modal${myJson.imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
+						      <img src="${myJson.Poster}" class="card-img" alt="${myJson.Title}"><div class="overlay"><h1>${myJson.Title}</h1></div>
+						    </div></a>
 						   `;
 			printInfo.innerHTML = card;
+			modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${myJson.imdbID}" role="dialog" tabindex="-1">
+                     <div class="modal-dialog modal-dialog-centered" role="document">
+                         <div class="modal-content">
+                             
+                             <div class="modal-body">
+                                 <div class="grid">
+                                    <img src ="${myJson.Poster}">
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>`;
+             showModal.innerHTML = modal;
 		 });
 	})
 }

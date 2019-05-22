@@ -10,7 +10,7 @@
     height: 100%;
     background-color: rgba(149, 24, 24, .8);
     opacity: 0;
-    z-index: 9999;
+    z-index: 1;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -35,15 +35,9 @@
 .overlay h1{
 	margin-top:150px;
 }
-.card-body button{
-	padding: 7px 15px;
-	border-radius: 15px;
+.card button {
 	border: none;
-	background-color: rgba(0, 0, 0, .5);;
-	color: white;
-}
-.card-body button:hover{
-	background-color: rgba(149, 24, 24, .5);
-	opacity: 1;
-    transition: .4s;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
 }
