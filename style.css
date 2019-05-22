@@ -15,6 +15,7 @@ body{
     left: 0;
     width: 100%;
     transition: .2s;
+    font-family: 'Poppins', sans-serif;
 }
 .overlay:hover {
     opacity: 1;
@@ -25,7 +26,8 @@ body{
 }
 /*movie cards*/
 #printInfo .card{
-	margin: 10px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
 
 }
 #printInfo .card:hover{
@@ -56,6 +58,8 @@ body{
 }
 nav.navbar {
     background-color:black;
+    margin-top:30px;
+    margin-bottom:30px;
 }
 .navbar-light .navbar-nav .nav-link {
     color:red;
@@ -66,6 +70,9 @@ nav.navbar {
  }   
  .form-inline{
 color: #2b303b;
+ }
+ .nav-link{
+     color:red;
  }
 
   
