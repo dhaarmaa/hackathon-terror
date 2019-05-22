@@ -16,11 +16,6 @@
  let modal ='';
  let imgHorror = '';
  window.load;
- // fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${keyTMD}&include_adult=true&include_video=false&page=1000&with_genres=27`).then(function(response) {
- //     return response.json();
- // }).then(function(myJson) {
- //     console.log(myJson);
- // });
 let data;
       	function getanswer(q){
       		fetch("https://www.omdbapi.com/?s="+q+"&apikey=69119fb3").then((response)=>{
@@ -115,7 +110,7 @@ document.getElementById('ghost').addEventListener('click', (e)=>{
 document.getElementById('wer').addEventListener('click', (e)=>{
 	e.preventDefault();
 	card = '';
-	hasAnyMovie(arrWerewolf);
+	getAnyMovie(arrWerewolf);
 })
 document.getElementById('shell').addEventListener('click', (e)=>{
 	e.preventDefault();
