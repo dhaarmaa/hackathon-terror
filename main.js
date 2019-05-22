@@ -34,8 +34,42 @@ let data;
       			let posterurl = data.Search[0].Poster;
       			printInfo.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
 						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h1>${title}</h1></div>
-						    </div></a>
-						   `
+						    </div></a>`;
+
+				showModal.innerHTML = `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${data.Search[0].imdbID}" role="dialog" tabindex="-1">
+                     <div class="modal-dialog modal-dialog-centered" role="document">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <h4 class="modal-title" id="exampleModalLongTitle">
+                                 ${title} ${year}
+                                 </h4>
+                               <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                     <span aria-hidden="true">
+                                         ×
+                                     </span>
+                                 </button>
+                          	 </div>
+                             <div class="modal-body">
+                                 <div class="row">
+                                 <div class="col-md-8">
+                                    <img src ="${posterurl}">
+                                    </div>
+                                    <div class="col-md-4">
+                                    <p>Director:${data.Search[0].Director}</p>
+           							<p>Genre:${data.Search[0].Genre}</p>
+                                    <p>Released:${data.Search[0].Released}</p>
+                                    <p>Actors:${data.Search[0].Actors}</p>
+                                    <p>Runtime:${data.Search[0].Runtime}</p>
+                                    <p>IMBD:</p>
+                                    <a href="https://www.imdb.com/title/${data.Search[0].imdbID}/" target="_blank">https://www.imdb.com/title/${data.Search[0].imdbID}/</a>
+                                    </div>
+                                 </div>
+                                 <p>${data.Search[0].Plot}</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>`;
+           
 						   })
       	}
 document.getElementById('vampires').addEventListener('click', (e)=>{
