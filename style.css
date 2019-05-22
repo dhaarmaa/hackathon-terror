@@ -55,7 +55,7 @@ body{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:  rgba(149, 24, 24, .8);
+    background-color:  rgba(149, 24, 24);
     color: white;
     text-align: center;
   }
@@ -69,7 +69,7 @@ nav.navbar {
     margin-bottom:30px;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(149, 24, 24, .8);
+    color: rgba(149, 24, 24);
     }
  .btn{
     background: #2b303b;
@@ -79,7 +79,7 @@ nav.navbar {
 color: #2b303b;
  }
  .nav-link{
-     color: rgba(149, 24, 24, .8);
+     color: rgba(149, 24, 24);
  }
 
   
