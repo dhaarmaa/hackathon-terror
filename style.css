@@ -7,8 +7,8 @@
     text-align: center;
     color: white;
     position: absolute;
-    height: 170px;
-    background-color: rgba(149, 24, 24, .5);
+    height: 100%;
+    background-color: rgba(149, 24, 24, .8);
     opacity: 0;
     z-index: 9999;
     bottom: 0;
@@ -26,9 +26,14 @@
 /*movie cards*/
 #printInfo .card{
 	margin: 10px;
+
 }
 #printInfo .card:hover{
 	cursor: pointer;
+
+}
+.overlay h1{
+	margin-top:150px;
 }
 .card-body button{
 	padding: 7px 15px;
