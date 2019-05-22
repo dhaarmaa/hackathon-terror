@@ -25,6 +25,9 @@ body{
 	margin-top: 60px;
 }
 /*movie cards*/
+.card{
+    background-color: black;
+}
 #printInfo .card{
     margin: 10px;
     font-family: 'Poppins', sans-serif;
