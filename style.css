@@ -16,6 +16,7 @@ body{
     left: 0;
     width: 100%;
     transition: .2s;
+    font-family: 'Poppins', sans-serif;
 }
 .overlay:hover {
     opacity: 1;
@@ -26,7 +27,8 @@ body{
 }
 /*movie cards*/
 #printInfo .card{
-	margin: 10px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
 
 }
 #printInfo .card:hover{
