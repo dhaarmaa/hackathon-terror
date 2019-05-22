@@ -32,8 +32,11 @@ let data;
       			let year = data.Search[0].Year;
       			let imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
       			let posterurl = data.Search[0].Poster;
-      			printInfo.innerHTML=`<h1>${title}</h1><br><img src="${posterurl}"/><br><p>Year:${year}</p><br><p>IMDBpage:<a href="${imdburl}" target="_blank">${imdburl}</a></p>`;
-      		})
+      			printInfo.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
+						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h1>${title}</h1></div>
+						    </div></a>
+						   `
+						   })
       	}
 document.getElementById('vampires').addEventListener('click', (e)=>{
 	e.preventDefault();
