@@ -1,5 +1,4 @@
 
-
 const idHorrorTMD = '27';
 const keyTMD = 'ab0d5cd05c182e2789b5577971a79aee';
 const keyOMBD = '69119fb3';

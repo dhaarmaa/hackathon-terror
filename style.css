@@ -84,7 +84,7 @@ body{
   
 .nav-link{
     margin-right:30px;
-    margin-left:100px;
+    margin-left:130px;
 }
 
 nav.navbar {
@@ -116,7 +116,6 @@ color:#dbdbdb;
  .form-control {
      background-color: #2b303b;
      height:36px;
-    
  }
  #about{
      font-size:28px;
@@ -134,5 +133,17 @@ height:50px;
 width:250px;;
 font-size:20px;
  }
-
- 
+#qurybox{
+     margin-left:40px;
+ }
+ .form-inline{
+     margin-right:60px;
+ }
+ @media (max-width: 700px) {
+    .navbar-toggler{
+    
+    background-color:rgba(149, 24, 24, .8);
+    border-color: rgba(255, 0, 0, 0.85);
+    }
+    }
+    
