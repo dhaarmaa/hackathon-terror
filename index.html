@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="slick/slick.css"/>
     <link rel="stylesheet" href="slick/slick-theme.css"/>
     <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body> 
     <div class="container">
@@ -31,14 +33,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                    <!-- <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li> -->
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">ABOUT US</a>
+
+                    <li class="nav-item active">
+
+
+                      <a class="nav-link" href="javascript:window.history.back();"><i class="w3-xxlarge w3-spin fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="https://bloody-disgusting.com/" target="_blank">NEWS</a>
+                      <a class="nav-link" href="#" id ="hi">About</a>
+
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="https://screenrant.com/best-asian-horror-movies/" target="_blank"> ASIAN HORROR</a>
@@ -48,14 +51,26 @@
                     </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search Movie 	&#128269;" aria-label="Search">
                   </form>
                 </div>
               </nav>
               <!-- FIN NABVAR -->
+
+             <div id ="about"></div>
 <div class="row flex-center" id="printSearch"></div>                    
 <div class="titles"><h3>CATEGORIES</h3></div>
 <div class="responsive">
+   <div class="card" style="width: 18rem;height: 170px;">
+    <a id="oscars" href="#">
+      <img src="img/thesilenceofthelambs.jpg" class="card-img-top" alt="vampire">
+      <div class="overlay"><p> Horror movies that won Oscars</p></div>
+    </a>
+  </div>
+
+<div class="card" style="width: 18rem;height: 170px;">
+  <a id="series" href="#"><img src="img/cuentosdelacripta.jpg" class="card-img-top" alt="vampire"><div class="overlay"><p>Horror Series</p></div></a>
+</div>
           <div class="card" style="width: 18rem;height: 170px;">
             <a id="classic" href="#">
               <img src="img/classic.jpeg" class="card-img-top" alt="vampire">
@@ -74,10 +89,12 @@
          <div class="card" style="width: 18rem;height: 170px;">
           <a id="wer" href="#"><img src="img/lican.jpeg" class="card-img-top" alt="werewolf"><div class="overlay"><p>WEREWOLF</p></div></a>
         </div>
+
               
 </div>        
   <div class="row flex-center" id="printInfo"></div>
  <div class="titles"><h3>BEST HORROR-DIRECTORS</h3></div>     
+
 <div class="responsive" >
           <div class="card" style="width: 18rem;height: 170px;">
             <a id="carpenter" href="#">
@@ -113,6 +130,7 @@
           <a id="kubrick" href="#"><img src="img/kubrik.jpg" class="card-img-top" alt="stanley kubrick"><div class="overlay"><p>STANLEY KOOBRICK</p></div></a>
        </div>          
 </div>
+
 <div class="row flex-center" id="printDirector"></div>
 <div class="titles"><h3>HORROR FILMS BASED ON BOOKS</h3></div> 
 <div class="responsive" >
@@ -139,6 +157,17 @@
   <div class="footer-copyright text-center py-3">Copyright © All rights reserved.
   </div>
 </footer>
+
+
+<script type="text/javascript">
+ 
+  function toTop() {
+      window.scrollTo(0, 0)
+  }
+   </script>
+   
+  <input type="Button"  class="btn btn-outline-dark" id="btn" value="UP!" onClick=toTop()>
+
 
 <!-- jquery -->
         <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js">
