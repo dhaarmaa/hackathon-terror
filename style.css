@@ -1,6 +1,10 @@
 body{
 	background-color: black;
 }
+/*navbar*/
+.navbar-toggler{
+    color: rgba(149, 24, 24, .8);
+}
 
 .overlay {
     font-size: 1.5rem;
@@ -25,7 +29,17 @@ body{
 .overlay p{
 	margin-top: 60px;
 }
+.overlay h5{
+    margin-top: 60px;
+}
 /*movie cards*/
+.titles{
+    color:rgba(149, 24, 24, .8);
+    
+}
+.titles h3{
+    text-align: center;
+}
 .card{
     background-color: black;
 }

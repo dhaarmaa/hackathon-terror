@@ -16,21 +16,27 @@
  const arrWhale = ['tt0026138','tt0021884','tt0024184','tt0020960','tt0028249','tt0022550','tt0023293','tt0031619','tt0023860','tt0021013','tt0026921','tt0029491','tt0025600','tt0028953','tt0024222','tt0023055','tt0030981','tt0030615','tt0032558','tt0034276'];
  const arrRaimi = ['tt4189022','tt0092991','tt0106308','tt0083907','tt0120324','tt0145487','tt0316654','tt0219699','tt0078503','tt1127180','tt0114214','tt0099365','tt0076216','tt1623205','tt0413300','tt0088967','tt6244528','tt0077344',];
  const arrCronenberg = ['tt0765443','tt0092357','tt0091064','tt0399146','tt0086541','tt0094964','tt0085407','tt0078908','tt0120907','tt0081455','tt0278731','tt0107468','tt0073705','tt0115964','tt1571222','tt0076590','tt1480656','tt0065591',];
- const arrArgento = ['tt0073582','tt0076786','tt0084777','tt0065143','tt0093677','tt0087909','tt0080923','tt0065761','tt0066735','tt1414347','tt0220827','tt0117658','tt0104053','tt0430676'];
+ const arrArgento = ['tt0073582','tt0076786','tt0084777','tt0065143','tt0093677','tt0080923','tt0065761','tt0066735','tt1414347','tt0220827','tt0117658','tt0104053','tt0430676'];
  const arrToro = ['tt0457430','tt0287856','tt2654620','tt0256009','tt5580390','tt0411477','tt0167190','tt1663662','tt0187738','tt0104029','tt0369452','tt2554274','tt0119675','tt0352307',]
  const arrHooper = ['tt0128419','tt0112104','tt0229916','tt0096708','tt0289830','tt0088513','tt0247120','tt0072271','tt0084516','tt0118426','tt3980622','tt0094466','tt0089489','tt0082427','tt3083958','tt0092076','tt0074455','tt0091276','tt0404011','tt3087848','tt0367153','tt0198309','tt0099822','tt1770672','tt0098375','tt0113762'];
  const arrKubrick = ['tt0081505','tt0057012','tt0050825','tt0093058','tt0066921','tt0062622','tt0072684','tt0049406','tt0054331','tt0056193','tt0120663','tt0048254','tt0042384','tt0045758'];
  const arrWan = ['tt0387564','tt0495241','tt1457767','tt3065204','tt2820852','tt1477834','tt1591095','tt2226417','tt0804461','tt0445061','tt0455760','tt1405369','tt1399045'];
  const arrHitch = ['tt0054215','tt0047396','tt0133302','tt3455796','tt0052357','tt0053125','tt0046912','tt0032976','tt0044079','tt0040746','tt0038787','tt0036342','tt0030341','tt0026029','tt0037017','tt0818899','tt0056869','tt0038109','tt0032484','tt0049470','tt0048728','tt0068611','tt0034248','tt0045897','tt0017075','tt0058329'];
+ const arrReleases = ['tt4504044','tt7329656','tt5886046','tt3612126','tt7752126','tt8155288','tt8663516','tt7349950'];
  const printInfo = document.getElementById('printInfo');
  const printDirector = document.getElementById('printDirector');
  const printBook = document.getElementById('printBook');
+ const printSearch = document.getElementById('printSearch');
+ const printRelease = document.getElementById('printRelease');
  const printModal = document.getElementById('modal');
  let card = '';
+ let cardRelease ='';
  let modal ='';
  let imgHorror = '';
+ let data;
  window.load;
-let data;
+
+
       	function getanswer(q){
       		fetch("https://www.omdbapi.com/?s="+q+"&apikey=69119fb3").then((response)=>{
       			return response.json();
@@ -42,7 +48,7 @@ let data;
       			let year = data.Search[0].Year;
       			let imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
       			let posterurl = data.Search[0].Poster;
-      			printInfo.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
+      			printSearch.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
 						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h1>${title}</h1></div>
 						    </div></a>`;
 				fetch(`https://www.omdbapi.com/?i=${data.Search[0].imdbID}&apikey=${keyOMBD}`).then((response)=>{
@@ -221,6 +227,23 @@ const getBookMovie  = (arr) =>{
      });
   })
 }
+const getReleaseMovie = (arr)=>{
+  arr.forEach((element)=>{
+    fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+      return response.json();
+    }).then((myJson)=>{
+      console.log(myJson);
+      cardRelease += `<div class="card" style="width: 18rem;height: 170px;">
+          <a data-target="#modal${myJson.imdbID}" data-toggle="modal" href="#"><img src="${myJson.Poster}" class="card-img-top" alt="${myJson.Title}"><div class="overlay"><h5>${myJson.Title}</h5>(${myJson.Released})</div></a>
+        </div>`;
+        printRelease.innerHTML = cardRelease;
+        showModal(myJson);
+        printModal.innerHTML = modal;
+
+    })
+  })
+}
+getReleaseMovie(arrReleases);
 const showCard = (obj) => {
   card += `<a data-target="#modal${obj.imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
                   <img src="${obj.Poster}" class="card-img" alt="${obj.Title}"><div class="overlay"><h1>${obj.Title}</h1></div>
@@ -233,7 +256,7 @@ const showModal = (obj) => {
                          <div class="modal-content">
                              <div class="modal-header">
                                  <h4 class="modal-title" id="exampleModalLongTitle">
-                                 ${obj.Title} ${obj.Year}
+                                 ${obj.Title} (${obj.Year})
                                  </h4>
                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                                      <span aria-hidden="true">
@@ -262,6 +285,7 @@ const showModal = (obj) => {
                      </div>
                  </div>`
 }
+
 const clean = () =>{
   card = '';
   printDirector.innerHTML= '';

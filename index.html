@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel= "shortcut icon" href ="https://files.slack.com/files-pri/T0NNB6T0R-FJWFBC2LC/rottenfilmslogo.png"/>
-
     <title>ROTTEN FILMS</title>
     <!-- css de bootstrap -->
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
@@ -16,7 +15,6 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body> 
-
     <div class="container">
         <div class="text-center">
           <div class="row">
@@ -26,31 +24,28 @@
         </div>
       </div>
     </div>
-    
             <!-- NAVBAR  -->       
             <nav class="navbar navbar-expand-lg style:"background-color:black;>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon" style="color:rgba(149, 24, 24, .8);"></span>
                 </button>
-              
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-
-
+                    <!-- <li class="nav-item active">
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="https://bloody-disgusting.com/" target="_blank">NEWS</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="https://bloody-disgusting.com/" target="_blank">News</a>
+                      <a class="nav-link" href="https://screenrant.com/best-asian-horror-movies/" target="_blank"> ASIAN HORROR</a>
                     </li>
-
                     <li class="nav-item">
-                      <a class="nav-link" href="https://screenrant.com/best-asian-horror-movies/" target="_blank"> Asian Horror</a>
+                      <a class="nav-link" href="">CLEAN</a>
                     </li>
-                    
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
                     <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -58,24 +53,15 @@
                 </div>
               </nav>
               <!-- FIN NABVAR -->
-                    
-
-
-
-<div id="answer"></div>
-  <!-- CONTENEDOR PARA LAS TARJETAS -->
-<!-- <div class="container" id="contMovieCards"></div> -->
-
-<!-- FIN CONTENEDOR -->
-<div class="responsive" >
-        
+<div class="row" id="printSearch"></div>                    
+<div class="titles"><h3>CATEGORIES</h3></div>
+<div class="responsive">
           <div class="card" style="width: 18rem;height: 170px;">
             <a id="classic" href="#">
               <img src="img/classic.jpeg" class="card-img-top" alt="vampire">
               <div class="overlay"><p>Classic horror movie</p></div>
             </a>
           </div>
-       
         <div class="card" style="width: 18rem;height: 170px;">
           <a id="vampires" href="#"><img src="img/vamp.jpg" class="card-img-top" alt="vampire"><div class="overlay"><p>VAMPIRE</p></div></a>
         </div>
@@ -91,7 +77,7 @@
               
 </div>        
         <div class="row" id="printInfo"></div>
-      
+ <div class="titles"><h3>BEST HORROR-DIRECTORS</h3></div>     
 <div class="responsive" >
           <div class="card" style="width: 18rem;height: 170px;">
             <a id="carpenter" href="#">
@@ -128,6 +114,7 @@
        </div>          
 </div>
 <div class="row" id="printDirector"></div>
+<div class="titles"><h3>HORROR FILMS BASED ON BOOKS</h3></div> 
 <div class="responsive" >
   <div class="card" style="width: 18rem;height: 170px;">
           <a id="king" href="#"><img src="img/king.jpeg" class="card-img-top" alt="king"><div class="overlay"> <p>BASED ON STEPHEN KING'S BOOKS</p></div></a>
@@ -143,7 +130,16 @@
        </div> 
   </div>
   <div class="row" id="printBook"></div>
+  <div class="titles"><h3>RELEASES 2019-2020</h3></div> 
+  <div class="responsive" id="printRelease"></div>
   <div id="modal"></div>
+<!-- Footer -->
+<footer class="page-footer font-small">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright © All rights reserved.
+  </div>
+</footer>
+
 <!-- jquery -->
         <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js">
         </script>
@@ -158,16 +154,6 @@
         <script src="slick/responsive_slick.js"></script>
         <script src="main.js">
         </script>
-
-<footer class="page-footer font-small">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">Copyright © All rights reserved.
-  </div>
-  
-
-</footer>
-<!-- Footer -->
 </body>
 
 </html>
