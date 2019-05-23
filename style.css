@@ -2,7 +2,13 @@
 body{
 	background-color: black;
 }
+/*navbar*/
+.navbar-toggler{
+    color: rgba(149, 24, 24, .8);
+}
 
+
+/*movie cards*/
 .overlay {
     font-size: 1.5rem;
     text-align: center;
@@ -23,39 +29,47 @@ body{
     opacity: 1;
     transition: .4s;
 }
-.overlay p{
-	margin-top: 60px;
-}
-/*movie cards*/
-#printInfo .card{
-    margin: 10px;
-    font-family: 'Poppins', sans-serif;
 
+.overlay h5,.overlay p{
+    margin-top: 60px;
 }
-#printInfo .card:hover{
-	cursor: pointer;
-
+.overlay h2{
+    margin-top: 150px;
 }
-.overlay h1{
-	margin-top:150px;
+.titles{
+    color:rgba(149, 24, 24, .8);
+    
+}
+.titles h3{
+    text-align: center;
+}
+.titles h3:hover{
+    color: white;
 }
 .card{
- margin-left:30px;
- margin-bottom:25px;
- 
+
+    background-color: black;
 }
-.card button {
-	border: none;
-	background-color: transparent;
-	margin: 0;
-	padding: 0;
+.card:hover{
+    cursor: pointer;
 }
+#printInfo .card, #printDirector .card, #printBook .card, #printSearch .card{
+    margin: 10px;
+
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+
 .page-footer {
     
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: rgba(149, 24, 24, .8);
     color: white;
     text-align: center;
   }
@@ -78,13 +92,18 @@ color:#dbdbdb;
     }
  
  .form-inline input {
-color: #2b303b;
-text-align: center;
+
+    color: #2b303b;
+    border-color: black;
+   text-align: center;
  }
  .nav-link{
-     color:rgba(214, 8, 8, 0.931);
+     color:rgba(149, 24, 24, .8);
      font-size:28px;
-     
+ }
+ .nav-link:hover{
+    color: white;
+
  }
  .form-control {
      background-color: #2b303b;
