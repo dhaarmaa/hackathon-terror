@@ -318,10 +318,10 @@ const showModal = (obj) => {
 document.getElementById('hi').addEventListener('click', (e)=>{
    
    document.getElementById('about').innerHTML=
-   "People go to horror films because they want to be frightened or they wouldn't do it twice. You choose your entertainment because you want it to affect you."+
+   "<p>People go to horror films because they want to be frightened or they wouldn't do it twice. You choose your entertainment because you want it to affect you."+
    "<br>That's certainly true of people who go to entertainment products like horror films that have big effects. They want those effects…[Horror films must] provide a just resolution in the end. The bad guy gets it. Even though they choose to watch these things, the images are still disturbing for many people. But people have the ability to pay attention as much or as little as they care to in order to control what effect it has on them, emotionally and otherwise."+
-   "<br>We are the voice of the film and television industry, a community of storytellers at the nexus of innovation ,imagination, and creative"
-   document.getElementById("slider").style.display="none";
+   "<br>We are the voice of the film and television industry, a community of storytellers at the nexus of innovation ,imagination, and creative</p>"
+ 
 })
 
 const clean = () =>{
