@@ -22,7 +22,6 @@
  const arrKubrick = ['tt0081505','tt0057012','tt0050825','tt0093058','tt0066921','tt0062622','tt0072684','tt0049406','tt0054331','tt0056193','tt0120663','tt0048254','tt0042384','tt0045758'];
  const arrWan = ['tt0387564','tt0495241','tt1457767','tt3065204','tt2820852','tt1477834','tt1591095','tt2226417','tt0804461','tt0445061','tt0455760','tt1405369','tt1399045'];
  const arrHitch = ['tt0054215','tt0047396','tt0133302','tt3455796','tt0052357','tt0053125','tt0046912','tt0032976','tt0044079','tt0040746','tt0038787','tt0036342','tt0030341','tt0026029','tt0037017','tt0818899','tt0056869','tt0038109','tt0032484','tt0049470','tt0048728','tt0068611','tt0034248','tt0045897','tt0017075','tt0058329'];
-
  const arrReleases = ['tt4504044','tt7329656','tt5886046','tt3612126','tt7752126','tt8155288','tt8663516','tt7349950'];
  const printInfo = document.getElementById('printInfo');
  const printDirector = document.getElementById('printDirector');
@@ -30,12 +29,8 @@
  const printSearch = document.getElementById('printSearch');
  const printRelease = document.getElementById('printRelease');
  const printModal = document.getElementById('modal');
-
  const arrOscars = ['tt0070047','tt0063522','tt0078748','tt0073195','tt0100157','tt0022835', 'tt0082010' ,'tt0103874','tt0075005', 'tt0102926']
  const arrSeries = ['tt1844624','tt1520211','tt0056777','tt0106179','tt4574334','tt0096708','tt8682948','tt2583620','tt7569592','tt7949204','tt0052520','tt2632424', 'tt1830617','tt2243973','tt4145384','tt2560140','tt1405406','tt6763664','tt2628232','tt1414347'];
- const printInfo = document.getElementById('printInfo');
- const showModal = document.getElementById('modal');
- 
 
  let card = '';
  let cardRelease ='';
