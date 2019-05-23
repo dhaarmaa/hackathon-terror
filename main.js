@@ -210,7 +210,7 @@ document.getElementById('series').addEventListener('click', (e)=>{
 
 const getAnyMovie = (arr) =>{
 	arr.forEach((element)=>{
-		fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+		fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
 		     return response.json();
 		 }).then((myJson)=>{
       showCard(myJson);
@@ -222,7 +222,7 @@ const getAnyMovie = (arr) =>{
 }
 const getDirectorMovie = (arr) =>{
   arr.forEach((element)=>{
-    fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
          return response.json();
      }).then((myJson)=>{
       showCard(myJson);
@@ -234,7 +234,7 @@ const getDirectorMovie = (arr) =>{
 }
 const getBookMovie  = (arr) =>{
   arr.forEach((element)=>{
-    fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
          return response.json();
      }).then((myJson)=>{
       showCard(myJson);
@@ -246,7 +246,7 @@ const getBookMovie  = (arr) =>{
 }
 const getReleaseMovie = (arr)=>{
   arr.forEach((element)=>{
-    fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
       return response.json();
     }).then((myJson)=>{
       console.log(myJson);
