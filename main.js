@@ -48,14 +48,14 @@ window.load;
 			 }).then((myJson)=>{
 				 let rawstring = JSON.stringify(myJson);
 				 data =JSON.parse(rawstring);
-				 console.log(data);
+				 
 				 let title = data.Search[0].Title;
 				 let year = data.Search[0].Year;
 				 let imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
       			let posterurl = data.Search[0].Poster;
       			printSearch.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
 
-						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h1>${title}</h1></div>
+						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h2>${title}</h2></div>
 						    </div></a>`;
 				fetch(`https://www.omdbapi.com/?i=${data.Search[0].imdbID}&apikey=${keyOMBD}`).then((response)=>{
 					return response.json();
