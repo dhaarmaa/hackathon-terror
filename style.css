@@ -6,6 +6,8 @@ body{
     color: rgba(149, 24, 24, .8);
 }
 
+
+/*movie cards*/
 .overlay {
     font-size: 1.5rem;
     text-align: center;
@@ -26,13 +28,13 @@ body{
     opacity: 1;
     transition: .4s;
 }
-.overlay p{
-	margin-top: 60px;
-}
-.overlay h5{
+
+.overlay h5,.overlay p{
     margin-top: 60px;
 }
-/*movie cards*/
+.overlay h2{
+    margin-top: 150px;
+}
 .titles{
     color:rgba(149, 24, 24, .8);
     
@@ -52,18 +54,10 @@ body{
 	cursor: pointer;
 
 }
-.overlay h1{
-	margin-top:150px;
-}
 .card{
  margin-left:30px;
 }
-.card button {
-	border: none;
-	background-color: transparent;
-	margin: 0;
-	padding: 0;
-}
+
 .page-footer {
     
     left: 0;

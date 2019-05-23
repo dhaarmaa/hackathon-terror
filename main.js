@@ -244,9 +244,10 @@ const getReleaseMovie = (arr)=>{
   })
 }
 getReleaseMovie(arrReleases);
+
 const showCard = (obj) => {
   card += `<a data-target="#modal${obj.imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
-                  <img src="${obj.Poster}" class="card-img" alt="${obj.Title}"><div class="overlay"><h1>${obj.Title}</h1></div>
+                  <img src="${obj.Poster}" class="card-img" alt="${obj.Title}"><div class="overlay"><h2>${obj.Title}</h2><p>IMBD Rating: ${obj.imdbRating}</p></div>
                 </div></a>
                `;
  }
