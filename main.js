@@ -42,7 +42,7 @@ let data;
       			let title = data.Search[0].Title;
       			let year = data.Search[0].Year;
       			let imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
-				  let posterurl = data.Search[0].Poster;
+				  let posterurl = data.Search[0].Poster
       			printInfo.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
 						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h1>${title}</h1></div>
 						    </div></a>`;
@@ -202,4 +202,8 @@ document.getElementById('hi').addEventListener('click', (e)=>{
 	"<br>We are the voice of the film and television industry, a community of storytellers at the nexus of innovation ,imagination, and creative"
 	document.getElementById("slider").style.display="none";
 })
+boton.addEventListener("click",function() {
+	window.history.back();
+  }
+  ,false);
 

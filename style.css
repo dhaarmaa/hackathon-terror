@@ -96,4 +96,16 @@ text-align: center;
      margin-top:80px;
      
  }
+#btn{
+margin-left:550px;
+margin-top:45px;
+margin-bottom:35px;
+color:red;
+height:50px;
+width:250px;;
+font-size:20px;
+ }
+placeholder{
+     color:white;
+ }
  

@@ -40,7 +40,7 @@
                     <li class="nav-item active">
 
 
-                      <a class="nav-link" href="#"><i class="w3-xxlarge w3-spin fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="javascript:window.history.back();"><i class="w3-xxlarge w3-spin fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#" id ="hi">About</a>
@@ -55,14 +55,13 @@
                     
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search Movie " aria-label="Search">
+                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search Movie 	&#128269;" aria-label="Search">
                   </form>
                 </div>
               </nav>
               <!-- FIN NABVAR -->
                     
 <div id ="about"></div>
-
 
 <div id="answer"></div>
   <!-- CONTENEDOR PARA LAS TARJETAS -->
@@ -177,6 +176,14 @@
 </div>
 </section>
 <div class="row" id="printInfo"></div>
+<script type="text/javascript">
+ 
+  function toTop() {
+      window.scrollTo(0, 0)
+  }
+   </script>
+   
+  <input type="Button"  class="btn btn-outline-dark" id="btn" value="UP!" onClick=toTop()>
 
 <!-- jquery -->
         <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js">
