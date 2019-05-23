@@ -233,8 +233,9 @@ const getReleaseMovie = (arr)=>{
       return response.json();
     }).then((myJson)=>{
       console.log(myJson);
+      let titleUp = myJson.Title.toUpperCase()
       cardRelease += `<div class="card" style="width: 18rem;height: 170px;">
-          <a data-target="#modal${myJson.imdbID}" data-toggle="modal" href="#"><img src="${myJson.Poster}" class="card-img-top" alt="${myJson.Title}"><div class="overlay"><h5>${myJson.Title}</h5>(${myJson.Released})</div></a>
+          <a data-target="#modal${myJson.imdbID}" data-toggle="modal" href="#"><img src="${myJson.Poster}" class="card-img-top" alt="${myJson.Title}"><div class="overlay"><h5>${titleUp}</h5><h6>(${myJson.Released})</h6></div></a>
         </div>`;
         printRelease.innerHTML = cardRelease;
         showModal(myJson);

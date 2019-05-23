@@ -42,21 +42,24 @@ body{
 .titles h3{
     text-align: center;
 }
+.titles h3:hover{
+    color: white;
+}
 .card{
     background-color: black;
 }
-#printInfo .card{
+.card:hover{
+    cursor: pointer;
+}
+#printInfo .card, #printDirector .card, #printBook .card, #printSearch .card{
     margin: 10px;
-    font-family: 'Poppins', sans-serif;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
 
-}
-#printInfo .card:hover{
-	cursor: pointer;
 
-}
-.card{
- margin-left:30px;
-}
 
 .page-footer {
     
@@ -79,15 +82,18 @@ nav.navbar {
 }
 .navbar-light .navbar-nav .nav-link {
     color:red;
-    
     }
  
  .form-inline input {
-color: #2b303b;
+    color: #2b303b;
+    border-color: black;
  }
  .nav-link{
-     color:rgba(214, 8, 8, 0.931);
-     font-size:22px;
+     color:rgba(149, 24, 24, .8);
+     font-size:20px;
+ }
+ .nav-link:hover{
+    color: white;
  }
  .form-control {
      background-color: #2b303b;
