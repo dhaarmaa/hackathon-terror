@@ -1,3 +1,4 @@
+
 const idHorrorTMD = '27';
 const keyTMD = 'ab0d5cd05c182e2789b5577971a79aee';
 const keyOMBD = '69119fb3';
@@ -40,6 +41,7 @@ let data;
 window.load;
 
 
+
 		 function getanswer(q){
 			 fetch("https://www.omdbapi.com/?s="+q+"&apikey=69119fb3").then((response)=>{
 				 return response.json();
@@ -50,52 +52,53 @@ window.load;
 				 let title = data.Search[0].Title;
 				 let year = data.Search[0].Year;
 				 let imdburl = "https://www.imdb.com/title/"+data.Search[0].imdbID+"/";
+      			let posterurl = data.Search[0].Poster;
+      			printSearch.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
 
-				 let posterurl = data.Search[0].Poster;
-				 printSearch.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
-							 <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h1>${title}</h1></div>
-						   </div></a>`;
-			   fetch(`https://www.omdbapi.com/?i=${data.Search[0].imdbID}&apikey=${keyOMBD}`).then((response)=>{
-				   return response.json();
-			   }).then((myJson)=>{    
-			   printModal.innerHTML = `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${myJson.imdbID}" role="dialog" tabindex="-1">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4 class="modal-title" id="exampleModalLongTitle">
-								${myJson.Title} ${myJson.Year}
-								</h4>
-							  <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-									<span aria-hidden="true">
-										×
-									</span>
-								</button>
-							  </div>
-							<div class="modal-body">
-								<div class="row">
-								<div class="col-md-8">
-								   <img src ="${myJson.Poster}">
-								   </div>
-								   <div class="col-md-4">
-								   <p>Director:${myJson.Director}</p>
-												  <p>Genre:${myJson.Genre}</p>
-								   <p>Released:${myJson.Released}</p>
-								   <p>Actors:${myJson.Actors}</p>
-								   <p>Runtime:${myJson.Runtime}</p>
-								   </div>
-								</div>
-								<p>${myJson.Plot}</p>
-								<p>IMBD:
-								   <a href="https://www.imdb.com/title/${myJson.imdbID}/" target="_blank">https://www.imdb.com/title/${data.Search[0].imdbID}/</a>
-								 </p>
-							</div>
-						</div>
-					</div>
-				</div>`;})
-		  
-						  })
-		 }
-	   // Movies
+						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h1>${title}</h1></div>
+						    </div></a>`;
+				fetch(`https://www.omdbapi.com/?i=${data.Search[0].imdbID}&apikey=${keyOMBD}`).then((response)=>{
+					return response.json();
+				}).then((myJson)=>{    
+				printModal.innerHTML = `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${myJson.imdbID}" role="dialog" tabindex="-1">
+                     <div class="modal-dialog modal-dialog-centered" role="document">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <h4 class="modal-title" id="exampleModalLongTitle">
+                                 ${myJson.Title} ${myJson.Year}
+                                 </h4>
+                               <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                     <span aria-hidden="true">
+                                         ×
+                                     </span>
+                                 </button>
+                          	 </div>
+                             <div class="modal-body">
+                                 <div class="row">
+                                 <div class="col-md-8">
+                                    <img src ="${myJson.Poster}">
+                                    </div>
+                                    <div class="col-md-4">
+                                    <p><small>Director:</small> ${myJson.Director}</p>
+           							            <p><small>Genre:</small> ${myJson.Genre}</p>
+                                    <p><small>Released:</small> ${myJson.Released}</p>
+                                    <p><small>Actors:</small> ${myJson.Actors}</p>
+                                    <p><small>Runtime:</small> ${myJson.Runtime}</p>
+                                    </div>
+                                 </div>
+                                 <p><small>Synopsis:</small></p>
+                                 <p>${myJson.Plot}</p>
+                                 <p><small>IMBD resource:</small></p>
+                                 <a href="https://www.imdb.com/title/${myJson.imdbID}/" target="_blank">https://www.imdb.com/title/${data.Search[0].imdbID}/</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>`;})
+           
+						   })
+      	}
+        // Movies
+
 document.getElementById('vampires').addEventListener('click', (e)=>{
    e.preventDefault();
    clean();
@@ -209,54 +212,56 @@ document.getElementById('series').addEventListener('click', (e)=>{
    
 
 const getAnyMovie = (arr) =>{
-   arr.forEach((element)=>{
-	   fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
-			return response.json();
-		}).then((myJson)=>{
-	 showCard(myJson);
-		   printInfo.innerHTML = card;
-		 showModal(myJson);
-	 printModal.innerHTML = modal;
-		});
-   })
+
+	arr.forEach((element)=>{
+		fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+		     return response.json();
+		 }).then((myJson)=>{
+      showCard(myJson);
+			printInfo.innerHTML = card;
+		  showModal(myJson);
+      printModal.innerHTML = modal;
+		 });
+	})
 }
 const getDirectorMovie = (arr) =>{
- arr.forEach((element)=>{
-   fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
-		return response.json();
-	}).then((myJson)=>{
-	 showCard(myJson);
-	 printDirector.innerHTML = card;
-	 showModal(myJson);
-	 printModal.innerHTML = modal;
-	});
- })
+  arr.forEach((element)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+         return response.json();
+     }).then((myJson)=>{
+      showCard(myJson);
+      printDirector.innerHTML = card;
+      showModal(myJson);
+      printModal.innerHTML = modal;
+     });
+  })
 }
 const getBookMovie  = (arr) =>{
- arr.forEach((element)=>{
-   fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
-		return response.json();
-	}).then((myJson)=>{
-	 showCard(myJson);
-	 printBook.innerHTML = card;
-	 showModal(myJson);
-	 printModal.innerHTML = modal;
-	});
- })
+  arr.forEach((element)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+         return response.json();
+     }).then((myJson)=>{
+      showCard(myJson);
+      printBook.innerHTML = card;
+      showModal(myJson);
+      printModal.innerHTML = modal;
+     });
+  })
 }
 const getReleaseMovie = (arr)=>{
- arr.forEach((element)=>{
-   fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
-	 return response.json();
-   }).then((myJson)=>{
-	 console.log(myJson);
-	 let titleUp = myJson.Title.toUpperCase()
-	 cardRelease += `<div class="card" style="width: 18rem;height: 170px;">
-		 <a data-target="#modal${myJson.imdbID}" data-toggle="modal" href="#"><img src="${myJson.Poster}" class="card-img-top" alt="${myJson.Title}"><div class="overlay"><h5>${titleUp}</h5><h6>(${myJson.Released})</h6></div></a>
-	   </div>`;
-	   printRelease.innerHTML = cardRelease;
-	   showModal(myJson);
-	   printModal.innerHTML = modal;
+  arr.forEach((element)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+      return response.json();
+    }).then((myJson)=>{
+      console.log(myJson);
+      let titleUp = myJson.Title.toUpperCase()
+      cardRelease += `<div class="card" style="width: 18rem;height: 170px;">
+          <a data-target="#modal${myJson.imdbID}" data-toggle="modal" href="#"><img src="${myJson.Poster}" class="card-img-top" alt="${myJson.Title}"><div class="overlay"><h5>${titleUp}</h5><h6>(${myJson.Released})</h6></div></a>
+        </div>`;
+        printRelease.innerHTML = cardRelease;
+        showModal(myJson);
+        printModal.innerHTML = modal;
+
 
    })
  })
@@ -270,40 +275,45 @@ const showCard = (obj) => {
 			  `;
 }
 const showModal = (obj) => {
- modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${obj.imdbID}" role="dialog" tabindex="-1">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4 class="modal-title" id="exampleModalLongTitle">
-								${obj.Title} (${obj.Year})
-								</h4>
-							  <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-									<span aria-hidden="true">
-										×
-									</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="row">
-								<div class="col-md-8">
-								   <img src ="${obj.Poster}">
-								   </div>
-								   <div class="col-md-4">
-								   <p>Director:${obj.Director}</p>
-					   <p>Genre:${obj.Genre}</p>
-								   <p>Released:${obj.Released}</p>
-								   <p>Actors:${obj.Actors}</p>
-								   <p>Runtime:${obj.Runtime}</p>
-								   </div>
-								</div>
-								<p>${obj.Plot}</p>
-								<p>IMBD:</p>
-								   <a href="https://www.imdb.com/title/${obj.imdbID}/" target="_blank">https://www.imdb.com/title/${obj.imdbID}/</a>
-							</div>
-						</div>
-					</div>
-				</div>`
+
+  let title = obj.Title.toUpperCase();
+  modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${obj.imdbID}" role="dialog" tabindex="-1">
+                     <div class="modal-dialog modal-dialog-centered" role="document">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <h4 class="modal-title" id="exampleModalLongTitle">
+                                 ${title} (${obj.Year})
+                                 </h4>
+                               <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                     <span aria-hidden="true">
+                                         ×
+                                     </span>
+                                 </button>
+                             </div>
+                             <div class="modal-body">
+                                 <div class="row">
+                                    <div class="col-md-8">
+                                      <img src ="${obj.Poster}">
+                                    </div>
+                                    <div class="col-md-4">
+                                      <p><small>Director:</small> ${obj.Director}</p>
+                                      <p><small>Genre:</small> ${obj.Genre}</p>
+                                      <p><small>Released:</small> ${obj.Released}</p>
+                                      <p><small>Actors:</small> ${obj.Actors}</p>
+                                      <p><small>Runtime:</small> ${obj.Runtime}</p>
+                                    </div>
+                                 </div>
+                                 <p><small>Synopsis:</small></p>
+                                 <p>${obj.Plot}</p>
+                                 <p><small>IMBD resource:</small></p>
+                                 <a href="https://www.imdb.com/title/${obj.imdbID}/" target="_blank">https://www.imdb.com/title/${obj.imdbID}/</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>`
+
 }
+
 document.getElementById('hi').addEventListener('click', (e)=>{
    
    document.getElementById('about').innerHTML=

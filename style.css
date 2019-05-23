@@ -61,9 +61,13 @@ body{
     display: flex;
     justify-content: center;
 }
-
-
-
+/*Modal*/
+.modal-title, small{
+    color:rgba(149, 24, 24, .8);
+}
+.modal-header{
+    border: none;
+}
 .page-footer {
     
     left: 0;
@@ -132,7 +136,10 @@ font-size:20px;
      margin-right:60px;
  }
  @media (max-width: 700px) {
-    .navbar-toggler-icon{
-    color: #999;
+    .navbar-toggler{
+    
+    background-color:rgba(149, 24, 24, .8);
+    border-color: rgba(255, 0, 0, 0.85);
     }
     }
+    
