@@ -213,54 +213,56 @@ document.getElementById('series').addEventListener('click', (e)=>{
    
 
 const getAnyMovie = (arr) =>{
-   arr.forEach((element)=>{
-	   fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
-			return response.json();
-		}).then((myJson)=>{
-	 showCard(myJson);
-		   printInfo.innerHTML = card;
-		 showModal(myJson);
-	 printModal.innerHTML = modal;
-		});
-   })
+
+	arr.forEach((element)=>{
+		fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+		     return response.json();
+		 }).then((myJson)=>{
+      showCard(myJson);
+			printInfo.innerHTML = card;
+		  showModal(myJson);
+      printModal.innerHTML = modal;
+		 });
+	})
 }
 const getDirectorMovie = (arr) =>{
- arr.forEach((element)=>{
-   fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
-		return response.json();
-	}).then((myJson)=>{
-	 showCard(myJson);
-	 printDirector.innerHTML = card;
-	 showModal(myJson);
-	 printModal.innerHTML = modal;
-	});
- })
+  arr.forEach((element)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+         return response.json();
+     }).then((myJson)=>{
+      showCard(myJson);
+      printDirector.innerHTML = card;
+      showModal(myJson);
+      printModal.innerHTML = modal;
+     });
+  })
 }
 const getBookMovie  = (arr) =>{
- arr.forEach((element)=>{
-   fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
-		return response.json();
-	}).then((myJson)=>{
-	 showCard(myJson);
-	 printBook.innerHTML = card;
-	 showModal(myJson);
-	 printModal.innerHTML = modal;
-	});
- })
+  arr.forEach((element)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+         return response.json();
+     }).then((myJson)=>{
+      showCard(myJson);
+      printBook.innerHTML = card;
+      showModal(myJson);
+      printModal.innerHTML = modal;
+     });
+  })
 }
 const getReleaseMovie = (arr)=>{
- arr.forEach((element)=>{
-   fetch(`http://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
-	 return response.json();
-   }).then((myJson)=>{
-	 console.log(myJson);
-	 let titleUp = myJson.Title.toUpperCase()
-	 cardRelease += `<div class="card" style="width: 18rem;height: 170px;">
-		 <a data-target="#modal${myJson.imdbID}" data-toggle="modal" href="#"><img src="${myJson.Poster}" class="card-img-top" alt="${myJson.Title}"><div class="overlay"><h5>${titleUp}</h5><h6>(${myJson.Released})</h6></div></a>
-	   </div>`;
-	   printRelease.innerHTML = cardRelease;
-	   showModal(myJson);
-	   printModal.innerHTML = modal;
+  arr.forEach((element)=>{
+    fetch(`https://www.omdbapi.com/?i=${element}&apikey=${keyOMBD}`).then((response)=>{
+      return response.json();
+    }).then((myJson)=>{
+      console.log(myJson);
+      let titleUp = myJson.Title.toUpperCase()
+      cardRelease += `<div class="card" style="width: 18rem;height: 170px;">
+          <a data-target="#modal${myJson.imdbID}" data-toggle="modal" href="#"><img src="${myJson.Poster}" class="card-img-top" alt="${myJson.Title}"><div class="overlay"><h5>${titleUp}</h5><h6>(${myJson.Released})</h6></div></a>
+        </div>`;
+        printRelease.innerHTML = cardRelease;
+        showModal(myJson);
+        printModal.innerHTML = modal;
+
 
    })
  })
