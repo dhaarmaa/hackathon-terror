@@ -2,6 +2,16 @@
 body{
 	background-color: black;
 }
+/*about*/
+#about p{
+    font-size: 20px;
+    margin: 20px;
+}
+@media (max-width:  576px) {
+    #about p{
+    font-size: 14px;
+}
+}
 /*navbar*/
 .navbar-toggler{
     color: rgba(149, 24, 24, .8);
@@ -113,13 +123,13 @@ color:#dbdbdb;
      background-color: #2b303b;
      height:36px;
  }
- #about{
+/* #about{
      font-size:28px;
      margin-left:115px;
      margin-right:60px;
      margin-top:80px;
      
- }
+ }*/
 #btn{
 margin-left:550px;
 margin-top:45px;
