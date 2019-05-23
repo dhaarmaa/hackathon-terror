@@ -1,7 +1,14 @@
+
 body{
 	background-color: black;
 }
+/*navbar*/
+.navbar-toggler{
+    color: rgba(149, 24, 24, .8);
+}
 
+
+/*movie cards*/
 .overlay {
     font-size: 1.5rem;
     text-align: center;
@@ -22,73 +29,102 @@ body{
     opacity: 1;
     transition: .4s;
 }
-.overlay p{
-	margin-top: 60px;
-}
-/*movie cards*/
-#printInfo .card{
-    margin: 10px;
-    font-family: 'Poppins', sans-serif;
 
+.overlay h5,.overlay p{
+    margin-top: 60px;
 }
-#printInfo .card:hover{
-	cursor: pointer;
-
+.overlay h2{
+    margin-top: 150px;
 }
-.overlay h1{
-	margin-top:150px;
+.titles{
+    color:rgba(149, 24, 24, .8);
+    
+}
+.titles h3{
+    text-align: center;
+}
+.titles h3:hover{
+    color: white;
 }
 .card{
- margin-left:30px;
+
+    background-color: black;
 }
-.card button {
-	border: none;
-	background-color: transparent;
-	margin: 0;
-	padding: 0;
+.card:hover{
+    cursor: pointer;
 }
-.sticky {
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.65);
-    z-index: 100;
+#printInfo .card, #printDirector .card, #printBook .card, #printSearch .card{
+    margin: 10px;
+
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+
 .page-footer {
     
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:  rgba(149, 24, 24);
+    background-color: rgba(149, 24, 24, .8);
     color: white;
     text-align: center;
   }
   
 .nav-link{
-    margin-right:80px;
-    margin-left:70px;
+    margin-right:30px;
+    margin-left:100px;
 }
+
 nav.navbar {
     background-color:black;
-    margin-top:30px;
+    margin-top:35px;
     margin-bottom:30px;
 }
+.nav-link:hover{
+color:#dbdbdb;
+}
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(149, 24, 24);
-    }
- .btn{
-    background: #2b303b;
-    
+    color:red;
     }
  
  .form-inline input {
-color: #2b303b;
+
+    color: #2b303b;
+    border-color: black;
+   text-align: center;
  }
  .nav-link{
-     color: rgba(149, 24, 24);
+     color:rgba(149, 24, 24, .8);
+     font-size:28px;
+ }
+ .nav-link:hover{
+    color: white;
+
  }
  .form-control {
      background-color: #2b303b;
-     height:30px;
+     height:36px;
+    
  }
+ #about{
+     font-size:28px;
+     margin-left:115px;
+     margin-right:60px;
+     margin-top:80px;
+     
+ }
+#btn{
+margin-left:550px;
+margin-top:45px;
+margin-bottom:35px;
+color:red;
+height:50px;
+width:250px;;
+font-size:20px;
+ }
+
  

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel= "shortcut icon" href ="https://files.slack.com/files-pri/T0NNB6T0R-FJWFBC2LC/rottenfilmslogo.png"/>
-
     <title>ROTTEN FILMS</title>
     <!-- css de bootstrap -->
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
@@ -14,9 +13,10 @@
     <link rel="stylesheet" href="slick/slick.css"/>
     <link rel="stylesheet" href="slick/slick-theme.css"/>
     <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body> 
-
     <div class="container">
         <div class="text-center">
           <div class="row">
@@ -26,83 +26,149 @@
         </div>
       </div>
     </div>
-    
             <!-- NAVBAR  -->       
             <nav class="navbar navbar-expand-lg style:"background-color:black;>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon" style="color:rgba(149, 24, 24, .8);"></span>
                 </button>
-              
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
+
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+
+                      <a class="nav-link" href="javascript:window.history.back();"><i class="w3-xxlarge w3-spin fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="#" id ="hi">About</a>
+
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="https://bloody-disgusting.com/" target="_blank">News</a>
+                      <a class="nav-link" href="https://screenrant.com/best-asian-horror-movies/" target="_blank"> ASIAN HORROR</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="https://screenrant.com/best-asian-horror-movies/" target="_blank"> Asian Horror</a>
+                      <a class="nav-link" href="">CLEAN</a>
                     </li>
-                    
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search Movie 	&#128269;" aria-label="Search">
                   </form>
                 </div>
               </nav>
               <!-- FIN NABVAR -->
-                    
 
+             <div id ="about"></div>
+<div class="row flex-center" id="printSearch"></div>                    
+<div class="titles"><h3>CATEGORIES</h3></div>
+<div class="responsive">
+   <div class="card" style="width: 18rem;height: 170px;">
+    <a id="oscars" href="#">
+      <img src="img/thesilenceofthelambs.jpg" class="card-img-top" alt="vampire">
+      <div class="overlay"><p> HORROR MOVIES THAT WON AN OSCAR</p></div>
+    </a>
+  </div>
 
-
-<div id="answer"></div>
-  <!-- CONTENEDOR PARA LAS TARJETAS -->
-<!-- <div class="container" id="contMovieCards"></div> -->
-
-<!-- FIN CONTENEDOR -->
-<div class="responsive" >
-        
+<div class="card" style="width: 18rem;height: 170px;">
+  <a id="series" href="#"><img src="img/cuentosdelacripta.jpg" class="card-img-top" alt="vampire"><div class="overlay"><p>HORROR SERIES</p></div></a>
+</div>
           <div class="card" style="width: 18rem;height: 170px;">
             <a id="classic" href="#">
               <img src="img/classic.jpeg" class="card-img-top" alt="vampire">
-              <div class="overlay"><p>Classic horror movie</p></div>
+              <div class="overlay"><p>CLASSIC HORROR MOVIE</p></div>
             </a>
           </div>
-       
         <div class="card" style="width: 18rem;height: 170px;">
           <a id="vampires" href="#"><img src="img/vamp.jpg" class="card-img-top" alt="vampire"><div class="overlay"><p>VAMPIRE</p></div></a>
         </div>
          <div class="card" style="width: 18rem;height: 170px;">
-          <a id="zombie" href="#"><img src="img/zombie.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>ZOMBIE</p></div></a>
-        </div>
-         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="king" href="#"><img src="img/king.jpeg" class="card-img-top" alt="vampire"><div class="overlay"> <p>BASED ON STEPHEN KING'S BOOKS</p></div></a>
-        </div>
-         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="love" href="#"><img src="img/love.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>WORLD OF HOWARD LOVECRAFT</p></div></a>
-        </div>
-         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="poe" href="#"><img src="img/poe.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>INSPIRED BY EDGAR ALLAN POE</p></div></a>
+          <a id="zombie" href="#"><img src="img/zombie.jpeg" class="card-img-top" alt="zombie"><div class="overlay"><p>ZOMBIE</p></div></a>
         </div>
         <div class="card" style="width: 18rem;height: 170px;">
-          <a id="ghost" href="#"><img src="img/fantasmas.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>GHOST</p></div></a>
+          <a id="ghost" href="#"><img src="img/fantasmas.jpeg" class="card-img-top" alt="ghost"><div class="overlay"><p>GHOST</p></div></a>
         </div>
          <div class="card" style="width: 18rem;height: 170px;">
-          <a id="wer" href="#"><img src="img/lican.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>WEREWOLF</p></div></a>
+          <a id="wer" href="#"><img src="img/lican.jpeg" class="card-img-top" alt="werewolf"><div class="overlay"><p>WEREWOLF</p></div></a>
+        </div>
+
+              
+</div>        
+  <div class="row flex-center" id="printInfo"></div>
+ <div class="titles"><h3>BEST HORROR-DIRECTORS</h3></div>     
+
+<div class="responsive" >
+          <div class="card" style="width: 18rem;height: 170px;">
+            <a id="carpenter" href="#">
+              <img src="img/carpenter.jpg" class="card-img-top" alt="john carpenter">
+              <div class="overlay"><p>JOHN CARPENTER</p></div>
+            </a>
+          </div>
+        <div class="card" style="width: 18rem;height: 170px;">
+          <a id="craven" href="#"><img src="img/craven.jpg" class="card-img-top" alt="wes craven"><div class="overlay"><p>WES CRAVEN</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="romero" href="#"><img src="img/romero.jpg" class="card-img-top" alt="george romero"><div class="overlay"><p>GEORGE A. ROMERO</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="whale" href="#"><img src="img/whale.jpg" class="card-img-top" alt="james whale"><div class="overlay"> <p>JAMES WHALE</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="raimi" href="#"><img src="img/raimi.jpg" class="card-img-top" alt="sam raimi"><div class="overlay"><p>SAM RAIMI</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="cronen" href="#"><img src="img/cronen.jpg" class="card-img-top" alt="david cronenberg"><div class="overlay"><p>DAVID CRONENBERG</p></div></a>
+        </div>
+        <div class="card" style="width: 18rem;height: 170px;">
+          <a id="argento" href="#"><img src="img/argento.jpg" class="card-img-top" alt="dario argento"><div class="overlay"><p>DARIO ARGENTO</p></div></a>
+        </div>
+         <div class="card" style="width: 18rem;height: 170px;">
+          <a id="toro" href="#"><img src="img/toro.jpg" class="card-img-top" alt="del toro"><div class="overlay"><p>GUILLERMO DEL TORO</p></div></a>
         </div>
        <div class="card" style="width: 18rem;height: 170px;">
-          <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>MARY SHELLEY AND HER DOCTOR FRANKENSTEIN</p></div></a>
-       </div>        
+          <a id="hooper" href="#"><img src="img/hooper.jpg" class="card-img-top" alt="tobe hooper"><div class="overlay"><p>TOBE HOOPER</p></div></a>
+       </div>
+      <div class="card" style="width: 18rem;height: 170px;">
+          <a id="kubrick" href="#"><img src="img/kubrik.jpg" class="card-img-top" alt="stanley kubrick"><div class="overlay"><p>STANLEY KOOBRICK</p></div></a>
+       </div>          
 </div>
 
-       
-        
-        <div class="row" id="printInfo"></div>
-        <div id="modal"></div>
+<div class="row flex-center" id="printDirector"></div>
+<div class="titles"><h3>HORROR FILMS BASED ON BOOKS</h3></div> 
+<div class="responsive" >
+  <div class="card" style="width: 18rem;height: 170px;">
+          <a id="king" href="#"><img src="img/king.jpeg" class="card-img-top" alt="king"><div class="overlay"> <p>BASED ON STEPHEN KING'S BOOKS</p></div></a>
+        </div>
+   <div class="card" style="width: 18rem;height: 170px;">
+          <a id="love" href="#"><img src="img/love.jpeg" class="card-img-top" alt="lovekraft"><div class="overlay"><p>WORLD OF HOWARD LOVECRAFT</p></div></a>
+        </div>
+  <div class="card" style="width: 18rem;height: 170px;">
+          <a id="poe" href="#"><img src="img/poe.jpeg" class="card-img-top" alt="allan poe"><div class="overlay"><p>INSPIRED BY EDGAR ALLAN POE</p></div></a>
+        </div>
+    <div class="card" style="width: 18rem;height: 170px;">
+          <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="mary shelley"><div class="overlay"><p>MARY SHELLEY AND HER DOCTOR FRANKENSTEIN</p></div></a>
+       </div> 
+  </div>
+  <div class="row flex-center" id="printBook"></div>
+  <div class="titles"><h3>RELEASES 2019-2020</h3></div> 
+  <div class="responsive" id="printRelease"></div>
+  <div id="modal"></div>
+  <script type="text/javascript">
+ 
+    function toTop() {
+        window.scrollTo(0, 0)
+    }
+     </script>
+     
+    <input type="Button"  class="btn btn-outline-dark" id="btn" value="UP!" onClick=toTop()>
+  
+  
+<!-- Footer -->
+<footer class="page-footer font-small">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright © All rights reserved.
+  </div>
+</footer>
+
+
 
 <!-- jquery -->
         <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js">
@@ -118,16 +184,6 @@
         <script src="slick/responsive_slick.js"></script>
         <script src="main.js">
         </script>
-
-<footer class="page-footer font-small blue">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">Copyright © All rights reserved.
-  </div>
-  
-
-</footer>
-<!-- Footer -->
 </body>
 
 </html>
