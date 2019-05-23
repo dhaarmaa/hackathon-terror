@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="slick/slick.css"/>
     <link rel="stylesheet" href="slick/slick-theme.css"/>
     <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body> 
 
@@ -38,10 +40,10 @@
                     <li class="nav-item active">
 
 
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="#"><i class="w3-xxlarge w3-spin fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="#" id ="hi">About</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="https://bloody-disgusting.com/" target="_blank">News</a>
@@ -53,13 +55,13 @@
                     
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"  class="form-control mr-sm-2" type="search" placeholder="Search Movie " aria-label="Search">
                   </form>
                 </div>
               </nav>
               <!-- FIN NABVAR -->
                     
-
+<div id ="about"></div>
 
 
 <div id="answer"></div>
@@ -67,6 +69,7 @@
 <!-- <div class="container" id="contMovieCards"></div> -->
 
 <!-- FIN CONTENEDOR -->
+<section id ="slider">
 <div class="responsive" >
         
           <div class="card" style="width: 18rem;height: 170px;">
@@ -102,9 +105,6 @@
        </div>        
 </div>
 
-       
-        
-        <div class="row" id="printInfo"></div>
         <div id="modal"></div>
 
 <div class="responsive" >
@@ -141,6 +141,42 @@
           <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>MARY SHELLEY AND HER DOCTOR FRANKENSTEIN</p></div></a>
        </div>        
 </div>
+<div class="responsive" >
+        
+  <div class="card" style="width: 18rem;height: 170px;">
+    <a id="oscars" href="#">
+      <img src="img/thesilenceofthelambs.jpg" class="card-img-top" alt="vampire">
+      <div class="overlay"><p> Horror movies that won Oscars</p></div>
+    </a>
+  </div>
+
+<div class="card" style="width: 18rem;height: 170px;">
+  <a id="series" href="#"><img src="img/cuentosdelacripta.jpg" class="card-img-top" alt="vampire"><div class="overlay"><p>Horror Series</p></div></a>
+</div>
+ <div class="card" style="width: 18rem;height: 170px;">
+  <a id="zombie" href="#"><img src="img/zombie.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>ZOMBIE</p></div></a>
+</div>
+ <div class="card" style="width: 18rem;height: 170px;">
+  <a id="king" href="#"><img src="img/king.jpeg" class="card-img-top" alt="vampire"><div class="overlay"> <p>BASED ON STEPHEN KING'S BOOKS</p></div></a>
+</div>
+ <div class="card" style="width: 18rem;height: 170px;">
+  <a id="love" href="#"><img src="img/love.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>WORLD OF HOWARD LOVECRAFT</p></div></a>
+</div>
+ <div class="card" style="width: 18rem;height: 170px;">
+  <a id="poe" href="#"><img src="img/poe.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>INSPIRED BY EDGAR ALLAN POE</p></div></a>
+</div>
+<div class="card" style="width: 18rem;height: 170px;">
+  <a id="ghost" href="#"><img src="img/fantasmas.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>GHOST</p></div></a>
+</div>
+ <div class="card" style="width: 18rem;height: 170px;">
+  <a id="wer" href="#"><img src="img/lican.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>WEREWOLF</p></div></a>
+</div>
+<div class="card" style="width: 18rem;height: 170px;">
+  <a id="shell" href="#"><img src="img/shell2.jpeg" class="card-img-top" alt="vampire"><div class="overlay"><p>MARY SHELLEY AND HER DOCTOR FRANKENSTEIN</p></div></a>
+</div>        
+</div>
+<div class="row" id="printInfo"></div>
+</section>
 <!-- jquery -->
         <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js">
         </script>
