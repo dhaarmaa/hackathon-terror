@@ -202,8 +202,5 @@ document.getElementById('hi').addEventListener('click', (e)=>{
 	"<br>We are the voice of the film and television industry, a community of storytellers at the nexus of innovation ,imagination, and creative"
 	document.getElementById("slider").style.display="none";
 })
-boton.addEventListener("click",function() {
-	window.history.back();
-  }
-  ,false);
+
 
