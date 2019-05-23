@@ -1,5 +1,3 @@
- const idHorrorTMD = '27';
- const keyTMD = 'ab0d5cd05c182e2789b5577971a79aee';
  const keyOMBD = '69119fb3';
  const arrVampires = ['tt0110148','tt0103874','tt0116367','tt0013442','tt0338526','tt0021814','tt1714915','tt0120611','tt0320691', 'tt0085701','tt1438176','tt0187738','tt0189998','tt0093437','tt1099212','tt1228987','tt0433362', 'tt0104511'];
  const arrZombies =['tt0480249','tt0120804','tt0289043','tt1156398','tt0365748','tt0363547','tt0089907','tt0063350','tt4877736','tt0083907','tt0100258','tt0463854','tt1038988','tt0089885','tt0816711','tt0088993','tt1588173','tt0318627','tt0023694','tt1077258']; 
@@ -23,15 +21,16 @@
  const arrWan = ['tt0387564','tt0495241','tt1457767','tt3065204','tt2820852','tt1477834','tt1591095','tt2226417','tt0804461','tt0445061','tt0455760','tt1405369','tt1399045'];
  const arrHitch = ['tt0054215','tt0047396','tt0133302','tt3455796','tt0052357','tt0053125','tt0046912','tt0032976','tt0044079','tt0040746','tt0038787','tt0036342','tt0030341','tt0026029','tt0037017','tt0818899','tt0056869','tt0038109','tt0032484','tt0049470','tt0048728','tt0068611','tt0034248','tt0045897','tt0017075','tt0058329'];
  const arrReleases = ['tt4504044','tt7329656','tt5886046','tt3612126','tt7752126','tt8155288','tt8663516','tt7349950'];
+ const arrOscars = ['tt0070047','tt0063522','tt0078748','tt0073195','tt0100157','tt0022835', 'tt0082010' ,'tt0103874','tt0075005', 'tt0102926'];
+ const arrSeries = ['tt1844624','tt1520211','tt0056777','tt0106179','tt4574334','tt0096708','tt8682948','tt2583620','tt7569592','tt7949204','tt0052520','tt2632424', 'tt1830617','tt2243973','tt4145384','tt2560140','tt1405406','tt6763664','tt2628232','tt1414347'];
+
  const printInfo = document.getElementById('printInfo');
  const printDirector = document.getElementById('printDirector');
  const printBook = document.getElementById('printBook');
  const printSearch = document.getElementById('printSearch');
  const printRelease = document.getElementById('printRelease');
  const printModal = document.getElementById('modal');
- const arrOscars = ['tt0070047','tt0063522','tt0078748','tt0073195','tt0100157','tt0022835', 'tt0082010' ,'tt0103874','tt0075005', 'tt0102926']
- const arrSeries = ['tt1844624','tt1520211','tt0056777','tt0106179','tt4574334','tt0096708','tt8682948','tt2583620','tt7569592','tt7949204','tt0052520','tt2632424', 'tt1830617','tt2243973','tt4145384','tt2560140','tt1405406','tt6763664','tt2628232','tt1414347'];
-
+ 
  let card = '';
  let cardRelease ='';
  let modal ='';
@@ -78,17 +77,17 @@
                                     <img src ="${myJson.Poster}">
                                     </div>
                                     <div class="col-md-4">
-                                    <p>Director:${myJson.Director}</p>
-           							            <p>Genre:${myJson.Genre}</p>
-                                    <p>Released:${myJson.Released}</p>
-                                    <p>Actors:${myJson.Actors}</p>
-                                    <p>Runtime:${myJson.Runtime}</p>
+                                    <p><small>Director:</small> ${myJson.Director}</p>
+           							            <p><small>Genre:</small> ${myJson.Genre}</p>
+                                    <p><small>Released:</small> ${myJson.Released}</p>
+                                    <p><small>Actors:</small> ${myJson.Actors}</p>
+                                    <p><small>Runtime:</small> ${myJson.Runtime}</p>
                                     </div>
                                  </div>
+                                 <p><small>Synopsis:</small></p>
                                  <p>${myJson.Plot}</p>
-                                 <p>IMBD:
-                                    <a href="https://www.imdb.com/title/${myJson.imdbID}/" target="_blank">https://www.imdb.com/title/${data.Search[0].imdbID}/</a>
-                                  </p>
+                                 <p><small>IMBD resource:</small></p>
+                                 <a href="https://www.imdb.com/title/${myJson.imdbID}/" target="_blank">https://www.imdb.com/title/${data.Search[0].imdbID}/</a>
                              </div>
                          </div>
                      </div>
@@ -271,12 +270,13 @@ const showCard = (obj) => {
                `;
  }
 const showModal = (obj) => {
+  let title = obj.Title.toUpperCase();
   modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${obj.imdbID}" role="dialog" tabindex="-1">
                      <div class="modal-dialog modal-dialog-centered" role="document">
                          <div class="modal-content">
                              <div class="modal-header">
                                  <h4 class="modal-title" id="exampleModalLongTitle">
-                                 ${obj.Title} (${obj.Year})
+                                 ${title} (${obj.Year})
                                  </h4>
                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                                      <span aria-hidden="true">
@@ -286,25 +286,27 @@ const showModal = (obj) => {
                              </div>
                              <div class="modal-body">
                                  <div class="row">
-                                 <div class="col-md-8">
-                                    <img src ="${obj.Poster}">
+                                    <div class="col-md-8">
+                                      <img src ="${obj.Poster}">
                                     </div>
                                     <div class="col-md-4">
-                                    <p>Director:${obj.Director}</p>
-                        <p>Genre:${obj.Genre}</p>
-                                    <p>Released:${obj.Released}</p>
-                                    <p>Actors:${obj.Actors}</p>
-                                    <p>Runtime:${obj.Runtime}</p>
+                                      <p><small>Director:</small> ${obj.Director}</p>
+                                      <p><small>Genre:</small> ${obj.Genre}</p>
+                                      <p><small>Released:</small> ${obj.Released}</p>
+                                      <p><small>Actors:</small> ${obj.Actors}</p>
+                                      <p><small>Runtime:</small> ${obj.Runtime}</p>
                                     </div>
                                  </div>
+                                 <p><small>Synopsis:</small></p>
                                  <p>${obj.Plot}</p>
-                                 <p>IMBD:</p>
-                                    <a href="https://www.imdb.com/title/${obj.imdbID}/" target="_blank">https://www.imdb.com/title/${obj.imdbID}/</a>
+                                 <p><small>IMBD resource:</small></p>
+                                 <a href="https://www.imdb.com/title/${obj.imdbID}/" target="_blank">https://www.imdb.com/title/${obj.imdbID}/</a>
                              </div>
                          </div>
                      </div>
                  </div>`
 }
+
 document.getElementById('hi').addEventListener('click', (e)=>{
 	
 	document.getElementById('about').innerHTML=
